@@ -5,24 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Práctica CSS</title>
-    <!--  <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/selector.css" />
+
     <style type="text/css" media="all">
       * {
         font-size: 15pt;
       }
-      p.aviso{
+      p.aviso {
         color: palevioletred;
       }
-      div.nuevo{
-color: darkcyan;
-
+      div.nuevo {
+        color: darkcyan;
       }
+    </style>
 
+    <style>
+      * {
+        color: #9588ff;
+      }
+    </style>
+    <style>
+      *.univ1 {
+        color: hotpink;
+      }
+    </style>
+
+    <!-- El selector ID se declara a través del signo # -->
+    <style>
+      p#alm1 {
+        color: red;
+      }
+    </style>
+    <style>
+      #alm2 {
+        color: gray;
+      }
     </style>
   </head>
 
   <body>
+    <p>Este es el párrafo 1</p>
+    <div>
+      <ul>
+        <li>Esto es una lista</li>
+        <li>Lista</li>
+        <p>Este es el párrafo 2</p>
+      </ul>
+      <p>Párrafo 3</p>
+    </div>
+
+    <p id="alm1">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam iste
+      voluptatum nemo laborum in magnam deleniti illum eius quaerat! Distinctio
+      error et adipisci rerum id animi culpa quia quis quas.
+    </p>
+
     <h1>Prueba</h1>
+
+    <div class="univ1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error molestiae
+      corporis id fuga eveniet eligendi accusamus, nemo, excepturi odit
+      consectetur tempore labore provident dicta asperiores aliquid optio quam
+      sed esse?
+    </div>
+
+    <p class="univ">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit commodi
+      aliquid, qui delectus architecto ullam labore iusto ratione? Quaerat ipsa
+      dolor minima necessitatibus! Dolorum amet et odit esse corrupti magnam.
+    </p>
 
     <div class="nuevo">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -30,11 +82,24 @@ color: darkcyan;
       repellendus. <br />Eligendi magnam earum soluta sint neque dolores ipsum.
       Harum, illo hic! Ab, consectetur cum?
     </div>
+
     <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae possimus optio adipisci impedit, labore iusto, est aliquam temporibus nostrum iure, omnis laborum tempora. Perferendis quisquam debitis fugiat laborum, recusandae ipsam?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+      possimus optio adipisci impedit, labore iusto, est aliquam temporibus
+      nostrum iure, omnis laborum tempora. Perferendis quisquam debitis fugiat
+      laborum, recusandae ipsam?
     </div>
-    <p class="aviso">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit ullam mollitia ut rem, quod illum dicta porro rerum eveniet adipisci nemo excepturi sint voluptatem autem beatae, odio, inventore atque velit!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aspernatur perferendis atque rem! Repellat nam necessitatibus quaerat eveniet doloribus, voluptatem fuga. Labore aspernatur ipsam eius in sunt similique, pariatur distinctio!
+    <p class="aviso">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit ullam
+      mollitia ut rem, quod illum dicta porro rerum eveniet adipisci nemo
+      excepturi sint voluptatem autem beatae, odio, inventore atque velit!
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aspernatur
+      perferendis atque rem! Repellat nam necessitatibus quaerat eveniet
+      doloribus, voluptatem fuga. Labore aspernatur ipsam eius in sunt
+      similique, pariatur distinctio!
     </p>
   </body>
 </html>

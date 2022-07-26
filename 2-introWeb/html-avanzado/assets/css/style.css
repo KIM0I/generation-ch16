@@ -1,0 +1,31 @@
+
+ul {
+list-style-type:square;
+
+}
+ol{
+    list-style-type: upper-latin;
+}
+h1{
+    background-color: paleturquoise;
+    width: fit-content;
+}
+div{
+    background-color: pink;
+    width: 200px;
+}
+
+a{
+    display:inline-block;
+    background-color: lightgray;
+    width: 200px;
+    height: 400px;
+    border: 1px solid red;
+}
+
+span{
+    font-size: large;
+    font-family: cursive;
+    font-weight: 700;
+    border:2px dotted blue;
+}

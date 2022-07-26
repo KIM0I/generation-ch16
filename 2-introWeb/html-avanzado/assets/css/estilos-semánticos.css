@@ -1,0 +1,33 @@
+* {
+  font-size: xx-large;
+}
+body {
+  width: 800px;
+}
+header {
+  background-color: plum;
+  height: 200px;
+  width: auto;
+}
+main {
+    display: flex;
+    align-items: center;
+  background-color: dimgray;
+  height: 500px;
+  width: autopx;
+}
+aside {
+  background-color: darkseagreen;
+}
+footer {
+  background-color: pink;
+  width: auto;
+  height: 50px;
+}
+
+.cuadro {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: honeydew;
+}
