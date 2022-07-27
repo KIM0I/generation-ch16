@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&family=Henny+Penny&display=swap');
+
+h1{
+font-family: 'Henny Penny', cursive;
+color: plum;
+}
+p{
+    font-family: 'MonteCarlo', cursive;
+}

@@ -1,0 +1,44 @@
+.cuadro {
+  background-color: dimgray;
+  height: 100px;
+  width: 100px;
+
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 15px;
+
+  padding: 20px;
+
+
+  border: 10px solid black;
+
+  border-radius: 0px 100px 0px 100px;
+
+}
+.el-1 {
+  background-color: #264653;
+  /* position:fixed; */
+}
+.el-2 {
+  background-color: #2a9d8f;
+  /* position:absolute;
+  top: 0px;
+  right: 0px; */
+  position: sticky;
+  top:0px;
+}
+.el-3 {
+  background-color: #e9c46a;
+ /*  position:relative;
+  bottom: 30px;
+  left: 100px; */
+}
+.el-4 {
+  background-color: #f4a261;
+  /* position:static */
+}
+.el-5 {
+  background-color: #e76f51;
+  /* position:static */
+}
