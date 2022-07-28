@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #fbde9c ;
+}
+nav {
+  background-color: #00a8b7;
+  
+}
+ul {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: x-large;
+  margin: 5px 15px;
+  color: white;
+  
+}
+
+a:hover{
+    color:#d95045;
+}
+
+.logo img {
+  height: 50px;
+  margin-left: 100px;
+}
+.contenedor{
+    margin:0px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Banner */
+.banner{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.banner img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+}
+/* Un rem se relaciona directamente con el font size o 16 pixeles */
+
+/* Las unidades rem dependen del html mientras que las unidades em no toman en cuenta la unidad patrón de raíz, sino la del padre */
