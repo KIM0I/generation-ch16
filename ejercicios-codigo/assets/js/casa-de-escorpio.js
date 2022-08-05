@@ -13,10 +13,13 @@ while (true) {
   if (numIngresado == 0) {
     alert("Nos vemos");
     break;
+
   } else if (numIngresado > numMagico) {
     alert("El número que ingresaste es MAYOR al número mágico");
+
   } else if (numIngresado < numMagico) {
     alert("El número que ingresaste es MENOR al número mágico");
+    
   } else if (numIngresado === numMagico) {
     alert("Felicidades, adivinaste el número mágico");
     break;

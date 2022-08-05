@@ -2,14 +2,14 @@
 //Calculadora de grados
 let gradosCelsius = prompt("Temperatura en grados Celsius");
 
-console.log("La temperatura en grados Celsius es: "+ gradosCelsius + "°");
+alert("La temperatura en grados Celsius es: "+ gradosCelsius + "°");
 
 function gradosFahrenheit(temp) {
     return (temp * 1.8) + 32;
   }
 
   let resultadoFahrenheit = gradosFahrenheit(gradosCelsius);
-  console.log("La temperatura en grados Fahrenheit es: " + resultadoFahrenheit + "°");
+  alert("La temperatura en grados Fahrenheit es: " + resultadoFahrenheit + "°");
   
   
   function gradosKelvin(temp) {
@@ -18,4 +18,4 @@ function gradosFahrenheit(temp) {
 
 
   let resultadoKelvin = gradosKelvin(gradosCelsius);
-  console.log("La temperatura en grados Kelvin es: " + resultadoKelvin + "°");
+  alert("La temperatura en grados Kelvin es: " + resultadoKelvin + "°");
