@@ -1,0 +1,18 @@
+#btnGatito{
+    display: block;
+    margin: 0 auto;
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: large;
+    border-radius: 10px;
+}
+#imagenGatito{
+    display: block;
+    margin: 0 auto;
+     width: 600px;
+     height: 400px; 
+    object-fit: cover;
+    border-radius: 20px;
+}
