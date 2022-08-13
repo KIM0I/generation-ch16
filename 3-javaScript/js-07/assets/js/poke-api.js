@@ -1,15 +1,32 @@
 /* URL a consumir */
-const urlPokemon = "https://pokeapi.co/api/v2/pokemon/199";
+const urlPokemon = "https://pokeapi.co/api/v2/pokemon/";
 
 /* Elementos del DOM */
 const imgPokemon = document.getElementById("img-pokemon");
-console.log(imgPokemon);
 
 const idPokemon = document.getElementById("id-pokemon");
-console.log(idPokemon);
 
 const nombrePokemon = document.getElementById("nombre-pokemon");
-console.log(nombrePokemon);
+
+const listaHabilidades = document.getElementById("lista-habilidades")
+
+const listaTipos = document.getElementById("lista-tipos");
+
+const formulario = document.getElementById("buscador-pokemon")
+console.log(formulario);
+
+/* Eventos */
+formulario.addEventListener("submit",(e) => {
+e.preventDefault(); //Detiene el evento y evita que cargue la página
+
+const inputPokemon = document.getElementById("busca-pokemon");
+
+const nuevaBusqueda = (urlPokemon += inputPokemon.value);
+console.log(nuevaBusqueda);
+
+obtenerPokemon(nuevaBusqueda)
+} )
+
 
 /* Funciones */
 async function obtenerPokemon(url) {
@@ -25,15 +42,41 @@ async function obtenerPokemon(url) {
 
   const pokemon = {
     nombre: datos.forms[0].name,
-    habilidad: datos.abilities,
+    habilidades: datos.abilities,
     id: datos.id,
     tipos: datos.types,
     imagen: datos.sprites.other["official-artwork"].front_default,
   };
 
+  //Imagen, Nombre y ID
   imgPokemon.src = pokemon.imagen;
   idPokemon.textContent = `ID: ${pokemon.id}`;
   nombrePokemon.textContent = pokemon.nombre;
+
+  //Habilidades con For
+
+let template = ``;
+
+for (let i = 0; i<pokemon.habilidades.length; i++){
+
+  const nombreHabilidad =pokemon.habilidades[i].ability.name;
+  
+  template += `<li class="list-group-item">${nombreHabilidad}</li>`
 }
 
-obtenerPokemon(urlPokemon);
+//Tipos con ForEach
+
+templateTipos = ``;
+
+pokemon.tipos.forEach((tipo) => {
+  const nombreTipo = tipo.type.name;
+
+  templateTipos += `<li class="list-group-item">${nombreTipo}</li>` 
+  
+});
+
+  
+  //Para añadir elementos a la lista desde js usa backticks
+listaHabilidades.innerHTML = template;
+listaTipos.innerHTML = templateTipos;
+}

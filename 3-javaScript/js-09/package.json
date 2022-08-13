@@ -1,0 +1,14 @@
+{
+  "name": "npm",
+  "version": "2.0.0",
+  "description": "Pruebita",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabi",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.2"
+  }
+}

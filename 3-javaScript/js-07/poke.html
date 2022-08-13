@@ -19,21 +19,21 @@
     <title>Pokemon</title>
   </head>
   <body>
-    
     <div class="container">
       <div class="row">
         <div class="col">
-          <form class="bg-dark p-4 text-white mt-4 rounded-lg">
+          <form
+            class="bg-dark p-4 text-white mt-4 rounded-lg"
+            id="buscador-pokemon"
+          >
             <div class="form-group my-3">
-              <label for="exampleInputEmail1"
-                >Escribe el nombre del pokemon</label
+              <label for="exampleInputEmail1">Escribe el nombre del pokemon</label
               >
               <input
                 type="text"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
+                class="form-control" id="busca-pokemon">
+              <label for="exampleInputEmail1"/>
+
               <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
             </div>
             <!-- <div class="form-group">
@@ -47,44 +47,33 @@
             <button type="submit" class="btn btn-primary w-100">Submit</button>
           </form>
         </div>
-      </div> 
-      <div class="row mt-5 ">
-      <div class="col"><div class="card text-center" style="width: 18rem;">
-        <img id="img-pokemon" src="" class="card-img-top" alt="Pokemon">
-        <div class="card-body">
-          <p id ="id-pokemon" class="card-text"></p>
-          <h4 id="nombre-pokemon"></h4>
-        </div>
-      </div></div>
-
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-        <div class="card-header bg-info">
-          Habilidades
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-      </div></div>
-
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-            <div class="card-header bg-success">
-              Tipos
+      </div>
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card text-center" style="width: 18rem">
+            <img id="img-pokemon" src="" class="card-img-top" alt="Pokemon" />
+            <div class="card-body">
+              <p id="id-pokemon" class="card-text"></p>
+              <h4 id="nombre-pokemon"></h4>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
-            </ul>
           </div>
+        </div>
+
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <div class="card-header bg-info">Habilidades</div>
+            <ul class="list-group list-group-flush" id="lista-habilidades"></ul>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <div class="card-header bg-success">Tipos</div>
+            <ul class="list-group list-group-flush" id="lista-tipos"></ul>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-
-   
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
