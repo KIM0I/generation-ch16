@@ -10,6 +10,11 @@ objSaludo = new Saludo(); //Asignarle memoria dinámica
 
         System.out.println(objSaludo.saludar0());
         System.out.println("este es otro objeto: " + objSaludo0.saludar0());
+        objSaludo0.textoS = "Hola";
+
+        System.out.println("objSaludo = " + objSaludo);
+
+
     }
 
 }

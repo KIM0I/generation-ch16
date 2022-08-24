@@ -1,4 +1,5 @@
 public class Saludo {
+    int a = 3;
     //Usar un verbo
         void saludar (){
             System.out.println("Hola Java OOP");
