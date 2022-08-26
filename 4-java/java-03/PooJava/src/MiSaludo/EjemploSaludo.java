@@ -1,3 +1,5 @@
+package MiSaludo;
+
 public class EjemploSaludo {
     public static void main(String[] args) {
 Saludo objSaludo; // definir un objeto
@@ -6,11 +8,10 @@ objSaludo = new Saludo(); //Asignarle memoria dinámica
         // Saludo objSaludo = new Saludo();
         objSaludo.saludar();
 
-        Saludo objSaludo0 =  new Saludo();
+        Saludo objSaludo1 =  new Saludo();
 
-        System.out.println(objSaludo.saludar0());
-        System.out.println("este es otro objeto: " + objSaludo0.saludar0());
-        objSaludo0.textoS = "Hola";
+        System.out.println(objSaludo1.saludar1());
+        System.out.println("este es otro objeto: " + objSaludo.saludar1());
 
         System.out.println("objSaludo = " + objSaludo);
 

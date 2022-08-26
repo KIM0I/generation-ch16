@@ -5,24 +5,25 @@ public class Persona {
     private int edad = 25;
     private int nss = 123;
 
-
-    }
-
-    Persona () {
-
-    }
-    public Persona(String nombre, int edad, int nss) {
+    public void setNombre(String nombre){
         this.nombre = nombre;
+    }
+    public void setEdad(int edad){
         this.edad = edad;
+    }
+    public void setNss(int nss){
         this.nss = nss;
+    }
+    public String getNombre(){
+        return nombre;
 
     }
-    public void caminar(){
-            System.out.println("Caminar");
+    public int getEdad(){
+            return edad;
 
     }
-    public void dormir(){
-            System.out.println("Dormir");
+    public int getNss(){
+           return nss;
 
     }
 }
