@@ -5,10 +5,10 @@ public class Circulo extends FigurasGeometricas {
 
     private double radio;
 
-    public Circulo() {
-    }
 
     public Circulo(double radio) {
+
+        super("Circulo");
         this.radio = radio;
     }
 
