@@ -1,47 +1,24 @@
 package com.generation.fgm.services;
 
-import javax.persistence.*;
+import java.util.ArrayList;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.generation.fgm.repositories.UsuarioRepository;
+import com.generation.fgm.models.UsuarioModel;
 
-@Entity 
-@Table(name = "usuario")
+@Service
 
 public class UsuarioService {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(unique = true, nullable = false)
-
-
+	@Autowired
+	UsuarioRepository usuariorepository;
 	
-	private Long id; 
-	private String name;
-	private String email;
-	private Integer prioridad;
+	public ArrayList<UsuarioModel> obtenerUsuarios(){
+		return (ArrayList<UsuarioModel>)usuariorepository.findAll();
+		
+	};
 	
 	
-	public Long getId() {
-		return id;
+	public UsuarioModel guardarUsuario(UsuarioModel usuario) {
+		return usuariorepository.save(usuario);
 	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public Integer getPrioridad() {
-		return prioridad;
-	}
-	public void setPrioridad(Integer prioridad) {
-		this.prioridad = prioridad;
-	}
-	
-
 }
