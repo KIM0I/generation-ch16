@@ -1,16 +1,21 @@
 package com.generation.mvc.services;
 
 import java.util.ArrayList;
+import static java.util.Collections.emptyList;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.generation.mvc.models.UsuarioModel;
 import com.generation.mvc.repositories.UsuarioRepository;
 
 @Service
-public class UsuarioService {
+public class UsuarioService implements UserDetailsService{
 
 	@Autowired
 	private  UsuarioRepository usuarioRepository;
@@ -50,6 +55,17 @@ public class UsuarioService {
 	public ArrayList<UsuarioModel> obtenerPorPrioridad(Integer prioridad) {
 		return usuarioRepository.findByPrioridad(prioridad);
 	}
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		// TODO Auto-generated method stub
+		UsuarioModel user = usuarioRepository.findByNombre(username);
+		if(user == null) {
+            throw new UsernameNotFoundException(username);
+        }
+        return new org.springframework.security.core.userdetails.User(user.getNombre(), user.getPassword(), emptyList());
+	}
+
+	}
 	
-}
 

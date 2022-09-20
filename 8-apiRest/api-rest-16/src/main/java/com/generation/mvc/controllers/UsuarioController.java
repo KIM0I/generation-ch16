@@ -3,6 +3,7 @@ package com.generation.mvc.controllers;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import com.generation.mvc.models.UsuarioModel;
@@ -13,8 +14,22 @@ import com.generation.mvc.services.UsuarioService;
 @RequestMapping("/usuario")
 public class UsuarioController {
 
-	@Autowired
-	UsuarioService usuarioService;
+	/*@Autowired
+	UsuarioService usuarioService;*/
+	
+	
+	//InyecciÃ³n por constructor
+	
+	
+
+	private final UsuarioService usuarioService;
+	private final BCryptPasswordEncoder bCryptPasswordEncoder;
+	public UsuarioController(@Autowired UsuarioService usuarioService, @Autowired BCryptPasswordEncoder bCryptPasswordEncoder) {
+		this.usuarioService = usuarioService;
+		this.bCryptPasswordEncoder=bCryptPasswordEncoder;
+	}
+	
+	
 	
 	//obtener todos los usuarios
 	@GetMapping() // http://localhost:8080/usuario
@@ -36,7 +51,8 @@ public class UsuarioController {
 	
 	@PostMapping()  // http://localhost:8080/usuario
 	public UsuarioModel guardarUsuario(@RequestBody UsuarioModel usuario){
-        return usuarioService.guardarUsuario(usuario);
+		usuario.setPassword(bCryptPasswordEncoder.encode(usuario.getPassword()));
+		return usuarioService.guardarUsuario(usuario);
     }
 
 	// Editar usuario
@@ -50,7 +66,7 @@ public class UsuarioController {
 		public String eliminarPorId(@PathVariable("id") Long id){
         boolean ok = this.usuarioService.eliminar(id);
         if (ok){
-            return "Se eliminó el usuario con id " + id;
+            return "Se eliminï¿½ el usuario con id " + id;
         }else{
             return "No pudo eliminar el usuario con id " + id;
         }
